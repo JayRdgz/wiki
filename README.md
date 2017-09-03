@@ -1,2 +1,2 @@
 # wiki
-A Node JS based Wiki.
+A NodeJS based Wiki.

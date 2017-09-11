@@ -7,10 +7,15 @@ let app = express()
 
 var PORT = process.env.PORT || 3000
 
-app.use("/static", express.static(path.join(__dirname, "/public/static")))
+app.use(express.static(path.join(__dirname, "./public")))
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'pug')
+app.use('/public', function(req, res, next) {
+    console.log(req.url)
+    next()
+})
+
+app.set("view engine", "pug")
+app.set("views", path.join(__dirname, "views"))
 
 app.get('/', function(req, res) {
     res.render('template', {

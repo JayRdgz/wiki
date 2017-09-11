@@ -1,21 +1,4 @@
 'use strict'
-const express = require('express')
-
-let app = express()
-
-app.use("/static", express.static(path.join(__dirname, "public")))
-
-app.set("view engine", "pug")
-app.set("views", path.join(__dirname, "views"))
-
-app.get('/', function(req, res) {
-    res.render('index', {
-        title: 'Wiki - Node based',
-        message: 'Hello there'
-    })
-})
-
-
 const keyhint = []
 const secretCode = "getmeaccess"
 

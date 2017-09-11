@@ -3,27 +3,34 @@ html(lang="en")
     head
         title=`${title}`
         script(type='text/javascript').
-            if (foo) bar(1 + 5)
+            const getV = []
+            const secKey = "e"
+            window.addEventListener('keyup', function(evnt) {
+                getV.push(evnt.key)
+                
+                if ( getV.join('').includes(secKey) )
+                    alert(`You have pressed ${evnt.key} key \n Code number: ${evnt.keyCode}`)
+            })
             
-        link(rel="stylesheet", href="public/static/css/wiki-stylesheet.css")
+        link(rel="stylesheet", href="/static/css/wiki-styles.css")
             
     body
         
         #app.app(data-module-app="application")
             
             #header.hDr(data-module-header="header")
-                h1.
-                    header
+                #searchbar.searchbar
+                
+                #viewlocation.viewlocation
+                    
+                #usrspace.usrspace
                 
             
             #container.cntnt(data-module-container="container")
-                h2.
-                    container
                 
-            
-            #footer.footer(data-module-footer="footer")
-                h3.
-                    footer
-        
-            
-        
+                #navbar.navbar(data-module-navbar="navigator")
+                    
+                #content.content
+                    
+                #side-info.side-info
+                

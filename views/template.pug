@@ -4,15 +4,26 @@ html(lang="en")
         title=`${title}`
         script(type='text/javascript').
             if (foo) bar(1 + 5)
-    body
-        h1 Pug - node template engine
-        
-        #container.col
             
-            if youAreUsingPug
-                p `${message}` You are amazing
-            else
-                p Get on it!
+        link(rel="stylesheet", href="public/static/css/wiki-stylesheet.css")
+            
+    body
+        
+        #app.app(data-module-app="application")
+            
+            #header.hDr(data-module-header="header")
+                h1.
+                    header
                 
-            p.
-                Pug is a terse and simple templating language.
+            
+            #container.cntnt(data-module-container="container")
+                h2.
+                    container
+                
+            
+            #footer.footer(data-module-footer="footer")
+                h3.
+                    footer
+        
+            
+        

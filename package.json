@@ -2,7 +2,7 @@
   "name": "wiki",
   "version": "1.0.0",
   "description": "A NodeJS based Wiki.",
-  "main": "index.js",
+  "main": "app-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/JayRdgz/wiki.git"
   },
-  "author": "",
+  "author": "Jersson A. Rodriguez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JayRdgz/wiki/issues"
@@ -18,6 +18,14 @@
   "homepage": "https://github.com/JayRdgz/wiki#readme",
   "dependencies": {
     "express": "^4.15.4",
-    "gup": "^1.1.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gup": "^1.1.1",
+    "jade": "^1.11.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4"
   }
 }

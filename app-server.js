@@ -1,27 +1,24 @@
 'use strict'
 const express = require('express')
+const path = require('path')
+const pug = require('pug')
 
 let app = express()
 
+var PORT = process.env.PORT || 3000
+
+app.use("/static", express.static(path.join(__dirname, "/public/static")))
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug')
+
 app.get('/', function(req, res) {
-    res.render('index', {
+    res.render('template', {
         title: 'Wiki - Node based',
         message: 'Hello there'
     })
 })
 
-const keyhint = []
-const secretCode = "getmeaccess"
-
-// # Listener for the events inside the DOM
-window.addEventListener('keyup', function(e){
-
-    // # Insert the key values
-    keyhint.push(e.key)
-    console.log(keyhint)
-
-    // # validates de keys of the given values from the client side
-    if ( keyhint.join('').includes(secretCode) )
-        alert('Hello world')
-
+app.listen(PORT, function() {
+    console.log('Server listening on ' + PORT)
 })

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JayRdgz/wiki#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "gup": "^1.1.1"
   }
 }

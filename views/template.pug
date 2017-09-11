@@ -1,6 +1,10 @@
 doctype html
 html(lang="en")
     head
+        
+        meta(name="theme-color", content=`${theme-color}`)
+        meta(charset="utf-8")
+            
         title=`${title}`
         script(type='text/javascript').
             const getV = []
@@ -8,10 +12,14 @@ html(lang="en")
             window.addEventListener('keyup', function(evnt) {
                 getV.push(evnt.key)
                 
-                if ( getV.join('').includes(secKey) )
+                if ( getV.join('').includes(secKey) ) {
                     alert(`You have pressed ${evnt.key} key \n Code number: ${evnt.keyCode}`)
+                }
             })
+        
             
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        
         link(rel="stylesheet", href="/static/css/wiki-styles.css")
             
     body
@@ -19,16 +27,40 @@ html(lang="en")
         #app.app(data-module-app="application")
             
             #header.hDr(data-module-header="header")
-                #searchbar.searchbar
+                
+                #logo-space.logo-space
+                    .logo My WikiBlog
                 
                 #viewlocation.viewlocation
+                    ul.locate-menu
+                        li.location-item 
+                            i.material-icons history
+                            span Historial
+                        li.location-item 
+                            i.material-icons chat_bubble 
+                            //span Comments
+                        li.location-item
+                            i.material-icons create
+                            //span Edition
+                        li.location-item 
+                            i.material-icons description
+                            //span Publication
+                        
+                #searchbar.searchbar
+                    input(type="text", data-search-module)#search.search
                     
                 #usrspace.usrspace
+                    .avatar
+                        i.material-icons person
+                        
                 
             
             #container.cntnt(data-module-container="container")
                 
                 #navbar.navbar(data-module-navbar="navigator")
+                                
+                    .navbar-content
+                        .label content
                     
                 #content.content
                     

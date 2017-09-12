@@ -20,7 +20,7 @@ app.set("views", path.join(__dirname, "views"))
 app.get('/', function(req, res) {
     res.render('template', {
         title: 'Wiki - Node based',
-        theme-color: '#4557af'
+        themeColor: '#26547C'
     })
 })
 

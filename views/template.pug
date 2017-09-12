@@ -19,6 +19,7 @@ html(lang="en")
         
             
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Roboto", rel="stylesheet")
         
         link(rel="stylesheet", href="/static/css/wiki-styles.css")
             
@@ -34,17 +35,13 @@ html(lang="en")
                 #viewlocation.viewlocation
                     ul.locate-menu
                         li.location-item 
-                            i.material-icons history
                             span Historial
                         li.location-item 
-                            i.material-icons chat_bubble 
-                            //span Comments
+                            span Comments
                         li.location-item
-                            i.material-icons create
-                            //span Edition
+                            span Edition
                         li.location-item 
-                            i.material-icons description
-                            //span Publication
+                            span Publication
                         
                 #searchbar.searchbar
                     input(type="text", data-search-module)#search.search
@@ -65,4 +62,6 @@ html(lang="en")
                 #content.content
                     
                 #side-info.side-info
+                    .label Contributor
+                    #contributor-avatar
                 
